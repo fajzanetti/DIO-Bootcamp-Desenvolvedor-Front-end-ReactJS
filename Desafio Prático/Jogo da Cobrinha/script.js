@@ -23,6 +23,17 @@ function criarCobrinha() {
     }
 }
 
+// CRIAR COMIDA
+let food = {
+    x: Math.floor(Math.random() * 15 + 1) * box,
+    y: Math.floor(Math.random() * 15 + 1) * box
+}
+
+function drawFood() {
+    context.fillStyle = 'red'
+    context.fillRect(food.x, food.y, box, box)
+}
+
 // EVENTLISTENER KEYDOWN
 document.addEventListener('keydown', update)
 
@@ -44,6 +55,7 @@ function iniciarJogo() {
 
     criarBG()
     criarCobrinha()
+    drawFood()
 
     let snakeX = snake[0].x
     let snakeY = snake[0].y
