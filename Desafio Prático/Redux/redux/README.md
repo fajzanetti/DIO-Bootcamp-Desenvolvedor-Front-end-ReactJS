@@ -9,3 +9,7 @@
 
 
 ###### Professor - Paulo Rezende
+
+# Certificado
+
+![Certificado](https://hermes.digitalinnovation.one/certificates/cover/6B665F81.jpg)
