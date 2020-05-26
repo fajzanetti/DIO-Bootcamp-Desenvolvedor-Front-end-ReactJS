@@ -13,7 +13,12 @@ class App extends Component {
     }
 
     handleOnClick = () => {
-        console.log('BUTTON')
+        // console.log('BUTTON')
+
+        const { addTodo } = this.props
+        const { input } = this.state
+
+        addTodo(input)
     }
 
     handleOnChange = (event) => {
@@ -26,7 +31,7 @@ class App extends Component {
         const { input } = this.state
         return (
             <div>
-                <List todolist={[]}/>
+                <List />
                 <Input onChange={(event) => this.handleOnChange(event)} value={input}/>
                 <Button onClick={this.handleOnClick}>Adicionar</Button>
             </div>
