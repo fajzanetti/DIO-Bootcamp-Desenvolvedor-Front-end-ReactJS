@@ -14,14 +14,17 @@ export default class index extends Component {
     }
 
     handleOnChange = (event) => {
-        console.log('INPUT', event.target.value)
+        // console.log('INPUT', event.target.value)
+
+        this.setState({input: event.target.value})
     }
 
     render() {
+        const { input } = this.state
         return (
             <div>
                 <List todolist={[]}/>
-                <Input onChange={(event) => this.handleOnChange(event)}/>
+                <Input onChange={(event) => this.handleOnChange(event)} value={input}/>
                 <Button onClick={this.handleOnClick}>Adicionar</Button>
             </div>
         )
