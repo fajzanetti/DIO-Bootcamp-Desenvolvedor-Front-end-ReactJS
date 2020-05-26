@@ -1,10 +1,13 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
 
 import Button from '../../components/button'
 import Input from '../../components/input'
 import List from '../../components/list'
 
-export default class index extends Component {
+import { addTodo } from '../../store/actions/todo'
+
+class App extends Component {
     state = {
         input: ''
     }
@@ -30,3 +33,12 @@ export default class index extends Component {
         )
     }
 }
+
+const mapStateToProps = state => ({
+    listTodo: state.todo
+})
+
+export default connect(
+    mapStateToProps, 
+    {addTodo}
+)(App)
