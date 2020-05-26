@@ -1,4 +1,4 @@
-import { crateStore } from 'redux'
+import { createStore } from 'redux'
 
 import reducers from './reducer'
 
